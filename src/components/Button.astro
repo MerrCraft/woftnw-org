@@ -1,0 +1,25 @@
+---
+// Usage: <Button href="/" secondary>Go Home</Button>
+const { href, secondary } = Astro.props;
+---
+
+<a class="primary-button" href={href}>
+	<slot />
+</a>
+
+<style>
+	.primary-button {
+		border-radius: 13px;
+		color: white;
+		transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+		background-color: #0f6be2;
+		font-weight: 700;
+		padding: 0.6rem 1rem;
+		text-decoration: none;
+	}
+
+	.primary-button:hover {
+		background-color: rgb(25, 79, 150);
+		text-shadow: 0 0 5px white;
+	}
+</style>
