@@ -8,6 +8,8 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 import WorldImage from '../assets/screenshots/2023-07-28_11.57.32.png';
 import EoFImage from '../assets/screenshots/2024-11-28_20.31.35.resized.png';
 import NPCImage from '../assets/screenshots/npc.resized.png';
+import Button from '../components/Button.astro';
+import Center from '../components/Center.astro';
 ---
 
 <!doctype html>
@@ -42,6 +44,11 @@ import NPCImage from '../assets/screenshots/npc.resized.png';
 				<h3>Interactive Characters</h3>
 				<p>Wings of Fire: The New World features a variety of interactive non-player characters, both as part of special events as well as around the world of Pretarsi (the planet on which Pyrrhia and Pantala reside). Some have quests you can complete or items you can purchase, and all of them have unique dialogue and personalities.</p>
 			</SideImage>
+			<Center>
+				<Button href="/gallery" secondary>
+					See more images in the gallery
+				</Button>
+			</Center>
 		</main>
 		<Footer />
 	</body>
