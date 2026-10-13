@@ -1,0 +1,38 @@
+---
+import { Picture } from "astro:assets";
+
+const { imageSrc, imageAlt, right } = Astro.props;
+---
+
+<div class="root">
+	<Picture src={imageSrc} alt={imageAlt} formats={["avif", "webp"]} class={right ? "right" : undefined} />
+	<div class={right ? "left" : undefined}>
+		<slot />
+	</div>
+</div>
+
+<style>
+	.root {
+		--gap-size: 20px;
+		display: grid;
+		grid-template-columns: 100%;
+		gap: var(--gap-size);
+		grid-template-rows: auto;
+	}
+
+	.left {
+		grid-column: 1;
+		grid-row: 1;
+	}
+
+	.right {
+		grid-column: 2;
+		grid-row: 1;
+	}
+
+	@media screen and (min-width: 700px) {
+		.root {
+			grid-template-columns: calc(50% - var(--gap-size)/2) calc(50% - var(--gap-size)/2);
+		}
+	}
+</style>
