@@ -3,23 +3,35 @@
 const { href, secondary } = Astro.props;
 ---
 
-<a class="primary-button" href={href}>
+<a class={"button " + (secondary ? "secondary" : "primary")} href={href}>
 	<slot />
 </a>
 
 <style>
-	.primary-button {
+	.button {
 		border-radius: 13px;
 		color: white;
 		transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
-		background-color: #0f6be2;
 		font-weight: 700;
 		padding: 0.6rem 1rem;
 		text-decoration: none;
 	}
-
-	.primary-button:hover {
-		background-color: rgb(25, 79, 150);
+	.button:hover {
 		text-shadow: 0 0 5px white;
+	}
+
+	.primary {
+		background-color: #0f6be2;
+	}
+	.primary:hover {
+		background-color: rgb(25, 79, 150);
+	}
+
+	.secondary {
+		border: 1px solid white;
+	}
+	.secondary:hover {
+		background-color: #B7B7B7;
+		color: #272727;
 	}
 </style>
