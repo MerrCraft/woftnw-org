@@ -71,10 +71,13 @@ a:hover {
 	color: var(--accent);
 }
 p {
-	margin-bottom: 1em;
+	margin: 0;
 }
 .prose p {
-	margin-bottom: 2em;
+	margin-bottom: 1em;
+}
+ul {
+	margin: 0;
 }
 textarea {
 	width: 100%;

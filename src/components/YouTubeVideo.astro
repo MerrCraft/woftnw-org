@@ -1,0 +1,28 @@
+---
+const { id, title } = Astro.props;
+
+const THUMBNAIL = `https://i.ytimg.com/vi_webp/${id}/maxresdefault.webp`;
+---
+
+<a href={`https://youtube.com/watch?v=${id}`} class="root">
+	<div class="contents">
+		<span class="title">{title}</span>
+	</div>
+</a>
+
+<style
+	define:vars={{ image: `url("${THUMBNAIL}")`}}
+>
+	.root {
+		aspect-ratio: 16 / 9;
+		background-image: var(--image);
+		background-size: contain;
+		box-shadow: 0 2rem 4rem inset black;
+		color: white;
+		text-decoration: none;
+	}
+
+	.contents {
+		margin: 0.5rem;
+	}
+</style>
