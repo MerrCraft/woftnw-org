@@ -7,6 +7,7 @@ import Container from './Container.astro';
 import Tagline from './Tagline.astro';
 import Button from './Button.astro';
 import Center from './Center.astro';
+import Stack from './Stack.astro';
 import JoinHelpText from './JoinHelpText.astro';
 ---
 
@@ -19,11 +20,11 @@ import JoinHelpText from './JoinHelpText.astro';
 	</div>
 	<div class="tagline">
 		<Container>
-			<Center>
+			<Stack>
 				<Tagline><b>Wings of Fire: The New World</b> is a community-driven Minecraft: Java Edition sever based on the <i>Wings of Fire</i> series of novels.</Tagline>
-				<Button href="https://discord.woftnw.org">Join the Discord</Button>
-				<JoinHelpText />
-			</Center>
+				<Center><Button href="https://discord.woftnw.org">Join the Discord</Button></Center>
+				<Center><JoinHelpText /></Center>
+			</Stack>
 		</Container>
 	</div>
 </div>
