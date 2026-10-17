@@ -18,6 +18,7 @@ import PyrrhiaMap from '../assets/Pyrrhia-Medium.png';
 import PantalaMap from '../assets/Pantala-Medium.png';
 import YouTubeVideo from '../components/YouTubeVideo.astro';
 import { Image } from 'astro:assets';
+import LegalDisclaimer from '../components/LegalDisclaimer.astro';
 ---
 
 <!doctype html>
@@ -107,6 +108,25 @@ import { Image } from 'astro:assets';
 				<Center>
 					<Button href="https://discord.woftnw.org">Join the Discord</Button>
 				</Center>
+				<h2>Frequently Asked Questions</h2>
+				<details>
+					<summary>What version is the server on? What is the server's address?</summary>
+					The server is running on Minecraft: Java Edition 1.21.4. Connect to it using either <em>woftnw.org</em> or <em>play.woftnw.org</em>!
+				</details>
+				<details>
+					<summary>Why can't I join?</summary>
+					You need to whitelist your account first! Join the Discord or send us an email. You may add usernames of friends, alt accounts, or anyone else. The server runs on Java Edition, which means you need the Windows/MacOS/Linux version of the game. Mobile, console, and other versions do not work. If the server is down or Dreamvisitor isn’t working, let the staff know and be patient; we will get to you!
+				</details>
+				<details>
+					<summary>Can I join the server on bedrock?</summary>
+					No, sadly. Our server software does not work with Xbox accounts, which are required for Bedrock support.
+				</details>
+				<details>
+					<summary>How can I tell if the server is online?</summary>
+					You can check the status of the server at https://status.woftnw.org/. If the server has crashed, it can take up to a few days for us to fix. If we take it down, then we’re probably working on it; we will be sure to keep you guys updated!
+				</details>
+				<p>For more frequently asked questions, see the <a href="https://wiki.woftnw.org/wiki/WOFTNW:Frequently_Asked_Questions">wiki page</a>. If you have a question not listed, join the Discord guild or email us at contact@woftnw.org.</p>
+				<LegalDisclaimer />
 			</Stack>
 		</main>
 		<Footer />
